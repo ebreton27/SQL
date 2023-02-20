@@ -1,0 +1,20 @@
+Create Table clothes (id integer Primary key, item Text, quantity integer, aisle integer, price Real);
+Insert Into clothes values(1, 'basic t-shirts', 45, 1, 12.99);
+Insert Into clothes values(2, 'graphic t-shirts', 40, 1, 15.99);
+Insert Into clothes values(3, 'basic polos', 30, 1, 19.99);
+Insert Into clothes values(4, 'sport polos', 35, 1, 21.99);
+Insert Into clothes values(5, 'short sleeve shirt', 48, 2, 18.99);
+Insert Into clothes values(6, 'long sleeve shirt', 38, 2, 25.99);
+Insert Into clothes values(7, 'sweater', 58, 2, 27.99);
+Insert Into clothes values(8, 'sweatershirt', 43, 2, 22.99);
+Insert Into clothes values(9, 'chino pants', 78, 3, 24.99);
+Insert Into clothes values(10, 'dress pants', 68, 3, 34.99);
+Insert Into clothes values(11, 'jogger pants', 44, 3, 22.99);
+Insert Into clothes values(12, 'bomber jacket', 28, 4, 69.99);
+Insert Into clothes values(13,'topcoat', 29, 4, 74.99);
+Insert Into clothes values(14, 'jean jacket', 42, 4, 59.99);
+Insert Into clothes values(15, 'Puffer Vest', 64, 4, 34.99);
+
+SELECT * FROM clothes WHERE price order by price asc;
+
+SELECT sum(quantity) from clothes;
