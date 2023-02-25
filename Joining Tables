@@ -1,0 +1,32 @@
+/* Create table about the people and what they do here */
+CREATE TABLE black_comedians(id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT);
+INSERT INTO black_comedians(name) VALUES ("Donald Glover");
+INSERT INTO black_comedians(name) VALUES ("Lamorne Morris");
+INSERT INTO black_comedians(name) VALUES ("Craig Robinson");
+INSERT INTO black_comedians(name) VALUES ("Damon Wayans Jr");
+INSERT INTO black_comedians(name) VALUES ("Terry Crews");
+INSERT INTO black_comedians(name) VALUES ("Lil Rel");
+
+
+CREATE TABLE tv_shows (
+id INTEGER PRIMARY KEY AUTOINCREMENT,
+comedian_id INTEGER,
+title TEXT,
+date TEXT);
+INSERT into tv_shows (comedian_id, title, date)
+VALUES (1, "Community", "2009-2014");
+INSERT into tv_shows (comedian_id, title, date)
+VALUES (2, "New Girl", "2011-2018");
+INSERT into tv_shows (comedian_id, title, date)
+VALUES (3, "The Office", "2005-2013");
+INSERT into tv_shows (comedian_id, title, date)
+VALUES (4, "Happy Endings", "2011-2013");
+INSERT into tv_shows (comedian_id, title, date)
+VALUES (5, "Brooklyn 99", "2013-2021");
+INSERT into tv_shows (comedian_id, title, date)
+VALUES (6, "The Carmichael Show", "2015-2017");
+
+Select black_comedians.name, tv_shows.title, tv_shows.date
+From black_comedians
+Join tv_shows
+On black_comedians.id = comedian_id;
